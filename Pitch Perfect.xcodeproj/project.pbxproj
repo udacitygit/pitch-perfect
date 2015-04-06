@@ -14,7 +14,6 @@
 		0ED409A31ACED85400328FE9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED409A11ACED85400328FE9 /* LaunchScreen.xib */; };
 		0ED409AF1ACED85500328FE9 /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED409AE1ACED85500328FE9 /* Pitch_PerfectTests.swift */; };
 		0ED570451AD247AD007376CE /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED570441AD247AD007376CE /* PlaySoundsViewController.swift */; };
-		0ED570671AD250F9007376CE /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0ED570661AD250F9007376CE /* movie_quote.mp3 */; };
 		0ED570691AD262FC007376CE /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED570681AD262FC007376CE /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		0ED409AD1ACED85500328FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED409AE1ACED85500328FE9 /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
 		0ED570441AD247AD007376CE /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		0ED570661AD250F9007376CE /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../movie_quote.mp3; sourceTree = "<group>"; };
 		0ED570681AD262FC007376CE /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 		0ED409961ACED85400328FE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0ED570661AD250F9007376CE /* movie_quote.mp3 */,
 				0ED409971ACED85400328FE9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -202,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED4099E1ACED85400328FE9 /* Main.storyboard in Resources */,
-				0ED570671AD250F9007376CE /* movie_quote.mp3 in Resources */,
 				0ED409A31ACED85400328FE9 /* LaunchScreen.xib in Resources */,
 				0ED409A01ACED85400328FE9 /* Images.xcassets in Resources */,
 			);
