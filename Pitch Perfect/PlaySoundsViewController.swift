@@ -10,56 +10,67 @@ import UIKit
 import AVFoundation
 class PlaySoundsViewController: UIViewController {
     var audioEngine: AVAudioEngine!
-    var audioFile:AVAudioFile!
-    var audioPlayer:AVAudioPlayer!
-    var receivedAudio:RecordedAudio!
+    var audioFile: AVAudioFile!
+    var audioPlayer: AVAudioPlayer!
+    var receivedAudio: RecordedAudio!
     override func viewDidLoad() {
+        //call parent method
         super.viewDidLoad()
 
-        
+        //create intances of audio player and audio engine with rate and get audio file passed in from model
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
         
         audioEngine = AVAudioEngine()
+        
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
 
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func playSlowAudio(sender: UIButton) {
-        // Play audio Slowly Here
-        audioPlayer.stop()
+        stopAndResetAudio()
         audioPlayer.rate = 0.5
         audioPlayer.play()
     }
    
-
     @IBAction func playFastAudio(sender: UIButton) {
-        audioPlayer.stop()
+        stopAndResetAudio()
         audioPlayer.rate = 3.0
         audioPlayer.play()
         
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
+        stopAndResetAudio()
         playAudioWithVariablePitch(1000)
-          }
+    }
     
     @IBAction func PlayDarthvaderAudio(sender: UIButton) {
+        stopAndResetAudio()
         playAudioWithVariablePitch(-1000)
+        
     }
+    
     @IBAction func stopAllAudio(sender: UIButton) {
+        stopAndResetAudio()
+    }
+    
+    //common method that will stop both methods of playback manupilation and move the audio to start of recorded file
+    func stopAndResetAudio(){
         audioPlayer.stop()
         audioPlayer.currentTime = 0.0
-        audioPlayer.rate = 1.0
-    }
-    func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
+    }
+    
+    //common method that will be called for chipmumk and darthvader effects changing only the pitch
+    func playAudioWithVariablePitch(pitch: Float){
+        stopAndResetAudio()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -80,15 +91,6 @@ class PlaySoundsViewController: UIViewController {
     
     
     
-    /*
 
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

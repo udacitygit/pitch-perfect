@@ -159,14 +159,22 @@
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i5E-Ou-oCr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9g-DR-ylL">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A5w-p6-jTp" firstAttribute="top" secondItem="IlF-mT-3Ji" secondAttribute="bottom" constant="24" id="0Xm-fo-NRF"/>
                             <constraint firstAttribute="centerX" secondItem="IlF-mT-3Ji" secondAttribute="centerX" id="3AU-U9-fGQ"/>
+                            <constraint firstAttribute="centerX" secondItem="x9g-DR-ylL" secondAttribute="centerX" id="BgB-KM-0Nf"/>
                             <constraint firstAttribute="centerY" secondItem="IlF-mT-3Ji" secondAttribute="centerY" id="LLv-6d-WNB"/>
                             <constraint firstAttribute="centerY" secondItem="Jgi-2d-4d6" secondAttribute="centerY" id="anZ-Ug-wvj"/>
                             <constraint firstAttribute="centerX" secondItem="Jgi-2d-4d6" secondAttribute="centerX" constant="-0.5" id="fF6-tf-Yaf"/>
+                            <constraint firstItem="IlF-mT-3Ji" firstAttribute="top" secondItem="x9g-DR-ylL" secondAttribute="bottom" constant="23" id="kdb-uC-Wtn"/>
                             <constraint firstAttribute="centerX" secondItem="A5w-p6-jTp" secondAttribute="centerX" constant="-0.5" id="rRF-U7-vkv"/>
                         </constraints>
                         <variation key="default">
@@ -174,10 +182,13 @@
                                 <exclude reference="IlF-mT-3Ji"/>
                                 <exclude reference="A5w-p6-jTp"/>
                                 <exclude reference="Jgi-2d-4d6"/>
+                                <exclude reference="x9g-DR-ylL"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BgB-KM-0Nf"/>
                                 <exclude reference="3AU-U9-fGQ"/>
                                 <exclude reference="LLv-6d-WNB"/>
+                                <exclude reference="kdb-uC-Wtn"/>
                                 <exclude reference="anZ-Ug-wvj"/>
                                 <exclude reference="fF6-tf-Yaf"/>
                                 <exclude reference="0Xm-fo-NRF"/>
@@ -189,10 +200,13 @@
                                 <include reference="IlF-mT-3Ji"/>
                                 <include reference="A5w-p6-jTp"/>
                                 <include reference="Jgi-2d-4d6"/>
+                                <include reference="x9g-DR-ylL"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BgB-KM-0Nf"/>
                                 <include reference="3AU-U9-fGQ"/>
                                 <include reference="LLv-6d-WNB"/>
+                                <include reference="kdb-uC-Wtn"/>
                                 <include reference="anZ-Ug-wvj"/>
                                 <include reference="fF6-tf-Yaf"/>
                                 <include reference="0Xm-fo-NRF"/>
@@ -205,6 +219,7 @@
                         <outlet property="recordButtonImage" destination="IlF-mT-3Ji" id="Jep-9g-n7g"/>
                         <outlet property="recordingInProgress" destination="A5w-p6-jTp" id="ere-EB-13H"/>
                         <outlet property="stopButtonImage" destination="Jgi-2d-4d6" id="ZHh-R9-IX2"/>
+                        <outlet property="tapToRecordLabel" destination="x9g-DR-ylL" id="MBg-O1-bet"/>
                         <segue destination="QIK-6t-BQ5" kind="show" identifier="stopRecording" id="FzU-Gj-9i9"/>
                     </connections>
                 </viewController>
