@@ -19,11 +19,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var stopButtonImage: UIButton!
     @IBOutlet weak var tapToRecordLabel: UILabel!
     
-    //not used but ready for enhancements
-    override func viewWillAppear(animated: Bool) {
-        
-    }
-    
     //when stop button is pushed, pass file to next view with Recorderd Audio Model
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "stopRecording"){
@@ -33,18 +28,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             
             
         }
-    }
-    
-    //not used but ready for enhancements
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    //not used but ready for enhancements
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //interface builder action that begins recording audio to memory when microphone button it tapped
